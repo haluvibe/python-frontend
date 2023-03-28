@@ -15,6 +15,7 @@ const Test = () => {
   const [data, setData] = useState<{
     message: string;
     base64Image: string;
+    base64Image2: string;
     best_correlation: number;
     best_lag: number;
     cross_correlation: number[];
@@ -118,6 +119,13 @@ const Test = () => {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={`data:image/png;base64,${data.base64Image}`}
+              alt="Lag Plot"
+            />
+          </Box>
+          <Box sx={{ textAlign: "center" }}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={`data:image/png;base64,${data.base64Image2}`}
               alt="Lag Plot"
             />
           </Box>
